@@ -27,8 +27,7 @@
     "cheerio": "0.10.7",
     "request": "2.14.0",
     "htmlparser": "1.7.6",
-    "soupselect": "0.2.0",
-    "flip": "~0.1.0"
+    "soupselect": "0.2.0"
   },
   "engines": {
     "node": ">= 0.8.x",
