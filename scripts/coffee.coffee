@@ -17,5 +17,5 @@ image = "http://cdn.makeagif.com/media/3-10-2014/g81xya.gif"
 
 module.exports = (robot) ->
   robot.hear /\b(coffee)\b/i, (msg) ->
-    if Math.random() > .9
+    if Math.random() > .8
       msg.send image
