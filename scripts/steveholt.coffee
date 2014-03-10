@@ -1,5 +1,5 @@
 # Description:
-#   When Steve Holt hears his name, Steve Holt makes his presence known
+#   When Jeff Reynolds hears his name, Steve Holt makes his presence known
 #
 # Dependencies:
 #   None
@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#   steve holt - Display an image of Steve Holt
+#   jeff reynolds - Display an image of Steve Holt
 #
 # Author:
 #   klamping
