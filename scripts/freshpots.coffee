@@ -1,0 +1,18 @@
+# Description:
+#   When coffee is made, Dave Grohl calls out FRESH POTS
+#
+# Dependencies:
+#   None
+#
+# Configuration:
+#   None
+#
+# Commands:
+#   fresh pot - Display an GIF of Dave Grohl  
+#
+# Author:
+#   dermill
+
+module.exports = (robot) ->
+  robot.hear /fresh pot/i, (msg) ->
+    msg.send msg.random steves
