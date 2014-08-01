@@ -15,4 +15,4 @@
 
 module.exports = (robot) ->
   robot.hear /fresh pot/i, (msg) ->
-    msg.send msg.random steves
+    msg.send "http://37.media.tumblr.com/tumblr_louv5wqO3y1qzwlp8o1_500.gif"
