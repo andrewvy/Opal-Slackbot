@@ -5,12 +5,12 @@
 #   "yelp": "0.1.1"
 #
 # Configuration:
-    HUBOT_YELP_CONSUMER_KEY = MauA58YVX9sWfOJ7nkM8Ew
-    HUBOT_YELP_CONSUMER_SECRET = lJx1PEF4gdzt5FfP9LlTvnXYJWg
-    HUBOT_YELP_TOKEN = Eag3FzN1y2pF8Ce0YGY1b-eLb-3xX7NM
-    HUBOT_YELP_TOKEN_SECRET = ujnbX8oJtcS8_tX35wD3E5U22Ko
-    HUBOT_YELP_SEARCH_ADDRESS = "334 NE 11th Ave, Portland, OR 97209"
-    HUBOT_YELP_SEARCH_RADIUS = 805
+#   HUBOT_YELP_CONSUMER_KEY
+#   HUBOT_YELP_CONSUMER_SECRET
+#   HUBOT_YELP_TOKEN =
+#   HUBOT_YELP_TOKEN_SECRET =
+#   HUBOT_YELP_SEARCH_ADDRESS =
+#   HUBOT_YELP_SEARCH_RADIUS =
 #   HUBOT_YELP_SORT
 #   HUBOT_YELP_DEFAULT_SUGGESTION
 #
@@ -47,10 +47,10 @@ token = process.env.HUBOT_YELP_TOKEN
 token_secret = process.env.HUBOT_YELP_TOKEN_SECRET
 
 # Default search parameters
-start_address = process.env.HUBOT_YELP_SEARCH_ADDRESS or "Portland, OR"
+start_address = process.env.HUBOT_YELP_SEARCH_ADDRESS or "334 NW 11th Ave Portland OR 97209"
 radius = process.env.HUBOT_YELP_SEARCH_RADIUS or 805
 sort = process.env.HUBOT_YELP_SORT or 0
-default_suggestion = process.env.HUBOT_YELP_DEFAULT_SUGGESTION or "Chipotle"
+default_suggestion = process.env.HUBOT_YELP_DEFAULT_SUGGESTION or "the carts"
 
 trim_re = /^\s+|\s+$|[\.!\?]+$/g
 
