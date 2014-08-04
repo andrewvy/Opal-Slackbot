@@ -47,10 +47,10 @@ token = process.env.HUBOT_YELP_TOKEN
 token_secret = process.env.HUBOT_YELP_TOKEN_SECRET
 
 # Default search parameters
-start_address = process.env.HUBOT_YELP_SEARCH_ADDRESS or "Portland, OR"
+start_address = process.env.HUBOT_YELP_SEARCH_ADDRESS or "334 NW 11th Ave, Portland, OR 97209"
 radius = process.env.HUBOT_YELP_SEARCH_RADIUS or 805
 sort = process.env.HUBOT_YELP_SORT or 0
-default_suggestion = process.env.HUBOT_YELP_DEFAULT_SUGGESTION or "Chipotle"
+default_suggestion = process.env.HUBOT_YELP_DEFAULT_SUGGESTION or "the carts"
 
 trim_re = /^\s+|\s+$|[\.!\?]+$/g
 
