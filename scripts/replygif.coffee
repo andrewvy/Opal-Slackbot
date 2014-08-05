@@ -31,7 +31,7 @@ module.exports = (robot) ->
             if not gifs? or not gifs.length
                 msg.send failMsg
             else
-                msg.send (msg.random gifs).file
+                msg.send (msg.random gifs).url
 
     robot.hear /.*replygif\.net\/(i\/)?(\d+)(?!.*\.gif).*/i, (msg) ->
         id = msg.match[2]
