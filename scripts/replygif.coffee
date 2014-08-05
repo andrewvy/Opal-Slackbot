@@ -26,7 +26,7 @@ apiUrl = "http://replygif.net/api/gifs?api-key=#{apiKey}"
 module.exports = (robot) ->
     apiCall = (msg, failMsg, query) ->
         robot.http(apiUrl + query).get() (err, res, body) ->
-            console.log body
+            msg.send body #to see raw output
             try
                 gifs = JSON.parse body
             if not gifs? or not gifs.length
