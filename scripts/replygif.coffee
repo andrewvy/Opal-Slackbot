@@ -8,10 +8,7 @@
 #   HUBOT_REPLYGIF_API_KEY: the api key for replygif.net, defaults to public key "39YAprx5Yi"
 #
 # Commands:
-#   hubot replygif <tag> - Embed a random ReplyGif with the given tag.
-#   hubot replygif me <tag> - Same as `hubot replygif <tag>`.
-#   hubot replygif id <id> - Embed the ReplyGif with the given id
-#   hubot replygif me id <id> - Same as `hubot replygif id <id>`.
+#   
 #
 # Notes:
 #   Use 'rg' as shorthand for the 'replygif' command
@@ -33,15 +30,6 @@ module.exports = (robot) ->
             else
                 msg.send (msg.random gifs).file
 
-    robot.hear /.*replygif\.net\/(i\/)?(\d+)(?!.*\.gif).*/i, (msg) ->
-        id = msg.match[2]
-        msg.send "http://replygif.net/i/#{id}.gif"
-
-    robot.respond /(.*)(.gif)/i, (msg) ->
+    robot.hear /(.*)(.gif)/i, (msg) ->
         tag = msg.match[1]
-        if tag is "id" then return # hubot's looking for an id
         apiCall msg, "I don't know that reaction", "&tag=#{tag}"
-
-    robot.respond /(replygif|rg)( me)? id (\d+)/i, (msg) ->
-        id = msg.match[3]
-        apiCall msg, "I don't any gifs with that id", "&id=#{id}"
