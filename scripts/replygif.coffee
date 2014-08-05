@@ -30,6 +30,6 @@ module.exports = (robot) ->
             else
                 msg.send (msg.random gifs).file
 
-    robot.hear /(.*)(.gif)/i, (msg) ->
+    robot.hear /([.*|\ ]+)(.gif)/i, (msg) ->
         tag = msg.match[1]
         apiCall msg, "I don't know that reaction", "&tag=#{tag}"
