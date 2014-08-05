@@ -32,6 +32,7 @@ module.exports = (robot) ->
                 msg.send failMsg
             else
                 msg.send (msg.random gifs).url
+                msg.send "http://replygif.net/i/#{id}.gif"
 
     robot.hear /.*replygif\.net\/(i\/)?(\d+)(?!.*\.gif).*/i, (msg) ->
         id = msg.match[2]
