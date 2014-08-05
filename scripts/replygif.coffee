@@ -32,5 +32,5 @@ module.exports = (robot) ->
 
     robot.hear /(.*)(.gif)/i, (msg) ->
         tag = msg.match[1]
-        tag.replace / /g, "-"
+        tag.replace /\s/g, "-"
         apiCall msg, "I don't know that GIF. See a list at http://replygif.net/t", "&tag=#{tag}"
