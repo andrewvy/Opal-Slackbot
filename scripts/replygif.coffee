@@ -37,8 +37,8 @@ module.exports = (robot) ->
         id = msg.match[2]
         msg.send "http://replygif.net/i/#{id}.gif"
 
-    robot.respond /(replygif|rg)( me)? (.*)/i, (msg) ->
-        tag = msg.match[3]
+    robot.respond /(.*)(.gif)/i, (msg) ->
+        tag = msg.match[1]
         if tag is "id" then return # hubot's looking for an id
         apiCall msg, "I don't know that reaction", "&tag=#{tag}"
 
