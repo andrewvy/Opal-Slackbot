@@ -34,7 +34,7 @@ module.exports = (robot) ->
 
     robot.hear /(.*)(.gif)/i, (msg) ->
         tag = msg.match[1] #.replace /\s/g, "-"
-        if /^http|^www/i in tag
+        if /^http|^www/i.test(tag)
             return
         else
             apiCall msg, "I don't know that GIF. See a list of tags at http://replygif.net/t", "&tag=#{tag}"
