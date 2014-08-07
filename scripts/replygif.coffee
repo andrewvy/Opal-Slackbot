@@ -32,6 +32,6 @@ module.exports = (robot) ->
             else
                 msg.send (msg.random gifs).file
 
-    robot.hear /^[^\/](.*)(.gif)/i, (msg) ->
-        tag = msg.match[1] #.replace /\s/g, "-"
+    robot.hear /(^[^\/])(.*)(.gif)/i, (msg) ->
+        tag = msg.match[2] #.replace /\s/g, "-"
         apiCall msg, "I don't know that GIF. See a list of tags at http://replygif.net/t", "&tag=#{tag}"
