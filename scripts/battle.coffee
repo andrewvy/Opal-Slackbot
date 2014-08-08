@@ -22,9 +22,8 @@ module.exports = (robot) ->
     users = robot.brain.usersForFuzzyName(name)
     if users.length is 1
       user = users[0]
-      msg.send user.name
       # Do something interesting here..
 
-      msg.send "#{user} has been struck!"
+      msg.send "#{user.name} has been struck!"
     else
       msg.send "I can't find that user."
