@@ -30,9 +30,9 @@ module.exports = (robot) ->
             else
                 msg.send (msg.random gifs).file
 
-    robot.hear /(.*)(.gif)/i, (msg) ->
+    robot.hear /(.*)(\.gif)/i, (msg) ->
         tag = msg.match[1]
-        if /^http|^www/i.test(tag)
+        if tag.indexOf("http") > -1
             return
         else
             apiCall msg, "I don't know that GIF. See a list of tags I know at http://replygif.net/t", "&tag=#{tag}"
