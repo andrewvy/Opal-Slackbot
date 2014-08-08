@@ -16,7 +16,7 @@
 
 module.exports = (robot) ->
 
-  robot.respond /battle @?([\w .\-]+)\?*$/i, (msg) ->
+  robot.respond /battle @?([\w .\-]+)\?*$ /i, (msg) ->
     name = msg.match[1].trim()
 
     users = robot.brain.userForName(name)
