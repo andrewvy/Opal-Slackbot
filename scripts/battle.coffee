@@ -25,3 +25,5 @@ module.exports = (robot) ->
       # Do something interesting here..
 
       msg.send "#{user} has been struck!"
+    else
+      msg.send "I can't find that user."
