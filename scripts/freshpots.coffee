@@ -13,7 +13,15 @@
 # Author:
 #   dermill
 
+pots = [
+	"http://37.media.tumblr.com/tumblr_louv5wqO3y1qzwlp8o1_500.gif",
+	"http://25.media.tumblr.com/tumblr_m5bndgzQsI1qic1zfo1_500.gif",
+	"http://31.media.tumblr.com/621c0e23e67932ac4bfdf7e6e887ccb0/tumblr_n0fm8dAN4e1rp72cbo1_500.gif",
+	"http://replygif.net/i/1171.gif",
+	"http://insurancebyjack.co.uk/blog-images/june-roundup/fresh_pots.gif",
+	"http://38.media.tumblr.com/tumblr_m3typb1loj1qgi59so1_500.gif"
+]
+
 module.exports = (robot) ->
   robot.hear /fresh pot/i, (msg) ->
-    msg.send "http://37.media.tumblr.com/tumblr_louv5wqO3y1qzwlp8o1_500.gif"
-
+    msg.send msg.random pots
