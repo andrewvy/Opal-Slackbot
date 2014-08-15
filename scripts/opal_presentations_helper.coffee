@@ -18,4 +18,4 @@ module.exports = (robot) ->
 		text = msg.match[0]
 		emails = text.match(/([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9._-]+)/gi).join(", ")
 		response = "emails = [" + emails + "]"
-		msg.send { room: "devtools" }, response
+		msg.send response
