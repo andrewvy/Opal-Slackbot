@@ -16,7 +16,11 @@
 module.exports = (robot) ->
 	robot.hear /.*presentations.*/, (msg) ->
 		text = msg.match[0]
-		emails = text.match(/([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9._-]+)/gi).join(", ")
+		emails = text.match(/([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9._-]+)/gi)
+		emails = emails.map (email) =>
+			'"' + email + '"'
+		emails = emails.join(", ")
 		response = "emails = [" + emails + "]"
+		
 		msg.send "Here are the emails that need presentations turned on:"
 		msg.send response
