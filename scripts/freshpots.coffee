@@ -25,3 +25,5 @@ pots = [
 module.exports = (robot) ->
   robot.hear /fresh pot/i, (msg) ->
     msg.send msg.random pots
+  robot.hear /fresh scott/i, (msg) ->
+    msg.send msg.random pots
